@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editorial Board | American Journal of Science</title>
+  <meta
+    name="description"
+    content="Editorial Board of the American Journal of Science, including Editors, Associate Editors, and Advisory Board members."
+  />
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Page-specific refinements for the Editorial Board page */
+    .editorial-editors-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .editorial-editors-grid .card {
+      border-top: 4px solid var(--accent);
+      padding: 1.75rem;
+    }
+
+    .editorial-editors-grid .card h3 {
+      font-size: 1.65rem;
+    }
+
+    .editorial-associate-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .editorial-associate-grid .card {
+      padding: 1.25rem;
+    }
+
+    .editorial-associate-grid .card h3 {
+      font-size: 1.25rem;
+    }
+
+    .expertise {
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1000px) {
+      .editorial-associate-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .editorial-editors-grid,
+      .editorial-associate-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <p class="site-title"><a href="/" style="color: inherit; text-decoration: none;">American Journal of Science</a></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/for-authors/">For Authors</a></li>
+	  <li class="nav-dropdown">
+	    <a href="https://ajsonline.org/articles">Articles</a>
+	    <ul class="dropdown-menu">
+              <li><a href="https://ajsonline.org/articles">Latest Articles</a></li>
+              <li><a href="https://ajsonline.org/issues">Issues</a></li>
+              <li><a href="https://ajsonline.org/search">Search Articles</a></li>
+	    </ul>
+	  </li>
+          <li><a href="/special-collections/">Special Collections</a></li>
+          <li><a href="/editorial-board/">Editorial Board</a></li>
+	  <li><a href="/policies/">Policies</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">American Journal of Science</div>
+      <h1>Editorial Board</h1>
+      <p>
+        AJS is guided by an editorial board representing a broad range of expertise
+        across Earth science, including geochemistry, tectonics, petrology,
+        biogeochemistry, stratigraphy, geochronology, and Earth history.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Editors</h2>
+        <p class="section-intro">
+          The Editors oversee the journal's scientific direction and editorial decision-making.
+        </p>
+
+        <div class="cards editorial-editors-grid">
+          <article class="card">
+            <div class="card-label">Editor</div>
+            <h3><a href="https://campuspress.yale.edu/markbrandon/">Mark T. Brandon</a></h3>
+            <p><strong>Yale University</strong></p>
+            <p class="expertise">Tectonics · Deformation processes · Thermochronology · Geomorphology · Paleotopography</p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Editor</div>
+            <h3>C. Page Chamberlain</h3>
+            <p><strong>Stanford University</strong></p>
+            <p class="expertise">Geochemistry</p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Editor</div>
+            <h3>Louis A. Derry</h3>
+            <p><strong>Cornell University</strong></p>
+            <p class="expertise">Biogeochemistry · Isotope geochemistry · Elemental cycling · Earth surface processes · Paleoceanography</p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Editor</div>
+            <h3><a href="https://eps.berkeley.edu/people/francis-macdonald-0">Francis Macdonald</a></h3>
+            <p><strong>University of California, Berkeley</strong></p>
+            <p class="expertise">Geology · Stratigraphy · Tectonics · Paleoclimate</p>
+          </article>
+<!--
+          <article class="card">
+            <div class="card-label">Editor</div>
+            <h3>Ann Pearson</h3>
+            <p><strong>Harvard University</strong></p>
+            <p class="expertise">Biogeochemistry · Organic geochemistry · Light stable isotope geochemistry · Geomicrobiology · Carbon cycle · Nitrogen cycle</p>
+          </article>
+	  -->
+	  <article class="card">
+	    <div class="card-label">Editor</div>
+	    <h3><a href="https://paleoclimate.geosciences.uconn.edu/">Michael T. Hren</a></h3>
+	    <p><strong>University of Connecticut</strong></p>
+		<p class="expertise">Bstable isotopes, geochemistry, paleoclimate, paleotopography, biomarkers</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Associate Editors</h2>
+        <p class="section-intro">
+          Associate Editors provide subject-matter expertise across the journal's areas of coverage.
+        </p>
+
+        <div class="cards editorial-associate-grid">
+          <article class="card">
+            <h3>Jay J. Ague</h3>
+            <p><strong>Yale University</strong></p>
+            <p>Petrology, mineralogy, high-temperature geochemistry, thermodynamics, kinetics</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://sites.google.com/bc.edu/ethan-baxter">Ethan Baxter</a></h3>
+            <p><strong>Boston College</strong></p>
+            <p>Geochemistry, geochronology, petrology, tectonics</p>
+          </article>
+
+          <article class="card">
+            <h3>Edward W. Bolton</h3>
+            <p><strong>Yale University</strong></p>
+            <p>Reactive transport modeling</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://www.gps.caltech.edu/people/claire-e-bucholz">Claire E. Bucholz</a></h3>
+            <p><strong>California Institute of Technology</strong></p>
+            <p>Igneous and metamorphic petrology, geochemistry</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://portal.findresearcher.sdu.dk/en/persons/donald-e-canfield">Don E. Canfield</a></h3>
+            <p><strong>University of Southern Denmark</strong></p>
+            <p>Biogeochemistry, geobiology, microbial ecology</p>
+          </article>
+
+          <article class="card">
+            <h3>William H. Casey</h3>
+            <p><strong>University of California, Davis</strong></p>
+            <p>Solution chemistry, reaction kinetics, aqueous geochemistry</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://drabon.eps.harvard.edu/">Nadja Drabon</a></h3>
+            <p><strong>Harvard University</strong></p>
+            <p>Sedimentology, stratigraphy, geochronology</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://paleoclimate.geosciences.uconn.edu">Michael T. Hren</a></h3>
+            <p><strong>University of Connecticut</strong></p>
+            <p>Stable isotopes, geochemistry, paleoclimate, paleotopography, biomarkers</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://sites.brown.edu/ibarra-lab/">Daniel E. Ibarra</a></h3>
+            <p><strong>Brown University</strong></p>
+            <p>Isotopes, paleoclimate, lakes, soils, caves, geochemistry, reactive transport, Quaternary geochronology, surface processes</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="http://brenh.in">C. Brenhin Keller</a></h3>
+            <p><strong>Dartmouth College</strong></p>
+            <p>Igneous petrology, geochemistry, geochronology, thermochronology, geoinformatics</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://kimberlylau.com">Kimberly Lau</a></h3>
+            <p><strong>Pennsylvania State University</strong></p>
+            <p>Isotope geochemistry, Earth history, biogeochemistry</p>
+          </article>
+
+          <article class="card">
+            <h3>Xian-Hua Li</h3>
+            <p><strong>Institute of Geology and Geophysics, Chinese Academy of Sciences</strong></p>
+            <p>Geochronology, igneous petrology and geochemistry, Precambrian geology</p>
+          </article>
+
+          <article class="card">
+            <h3>Timothy W. Lyons</h3>
+            <p><strong>University of California, Riverside</strong></p>
+            <p>Biogeochemistry, geobiology, astrobiology, paleoceanography</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://metamorphism.de">Evangelos Moulas</a></h3>
+            <p><strong>Johannes Gutenberg University</strong></p>
+            <p>Petrology, metamorphic processes, thermodynamics in Earth systems, numerical geodynamic modelling</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://www.senckenberg.de/en/institutes/sbik-f/ag-paleoclimate-and-paleoenvironment-dynamics/team-paleoclimate-and-paleoenvironmental-dynamics/">Andreas Mulch</a></h3>
+            <p><strong>Senckenberg Biodiversity and Climate Research Centre</strong></p>
+            <p>Paleoclimate, tectonics, stable isotopes, geology</p>
+          </article>
+
+          <article class="card">
+            <h3>Amanda M. Oehlert</h3>
+            <p><strong>University of Miami, RSMAS</strong></p>
+            <p>Carbonate biogeochemistry, diagenesis, sedimentology, global carbon cycle</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://paleobiology.stanford.edu">Jonathan L. Payne</a></h3>
+            <p><strong>Stanford University</strong></p>
+            <p>Paleobiology, carbon cycle, Earth history</p>
+          </article>
+<article class="card">
+            <h3>Ann Pearson</h3>
+            <p><strong>Harvard University</strong></p>
+            <p>Biogeochemistry, organic geochemistry, light stable isotope geochemistry, geomicrobiology, carbon cycle, nitrogen cycle</p>
+          </article>
+          <article class="card">
+            <h3>Brad Sageman</h3>
+            <p><strong>Northwestern University</strong></p>
+            <p>Stratigraphy, geochemistry</p>
+          </article>
+
+          <article class="card">
+            <h3>Zachary Sharp</h3>
+            <p><strong>University of New Mexico</strong></p>
+            <p>Stable isotopes</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://torres-lab.github.io">Mark Albert Torres</a></h3>
+            <p><strong>Rice University, Department of Earth, Environmental, and Planetary Sciences</strong></p>
+            <p>Biogeochemistry, surface processes, chemical weathering</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://www.geol.umd.edu/home/richard-walker/research/">Richard J. Walker</a></h3>
+            <p><strong>University of Maryland</strong></p>
+            <p>Trace element and radiogenic isotope geochemistry, mantle geochemistry, early solar system processes</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://drjoshwest.weebly.com">A. Joshua (Josh) West</a></h3>
+            <p><strong>University of Southern California</strong></p>
+            <p>Low-temperature geochemistry, geomorphology, erosion, weathering, carbon cycle, biogeochemistry</p>
+          </article>
+
+          <article class="card">
+            <h3>Simon A. Wilde</h3>
+            <p><strong>Curtin University</strong></p>
+            <p>Geochemistry, geochronology, tectonics, petrology</p>
+          </article>
+
+          <article class="card">
+            <h3>Matthew J. Winnick</h3>
+            <p><strong>University of Massachusetts Amherst</strong></p>
+            <p>Reactive transport modeling, global biogeochemical cycles, chemical weathering, stable isotopes</p>
+          </article>
+
+          <article class="card">
+            <h3>Robert Wintsch</h3>
+            <p><strong>Wesleyan University</strong></p>
+            <p>Structural petrology, geochronology</p>
+          </article>
+
+          <article class="card">
+            <h3><a href="http://scholar.google.com/citations?user=5gfMg_0AAAAJ&hl=en">Guochun Zhao</a></h3>
+            <p><strong>The University of Hong Kong</strong></p>
+            <p>Precambrian geology, metamorphic geology, supercontinents</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Advisory Board</h2>
+        <p class="section-intro">
+          The Advisory Board provides institutional and scholarly guidance for the journal.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Jay J. Ague</h3>
+            <p><strong>Yale University</strong></p>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://people.earth.yale.edu/profile/david-evans/about">David A. Evans</a></h3>
+            <p><strong>Yale University</strong></p>
+          </article>
+
+          <article class="card">
+            <h3>Peter Raymond</h3>
+            <p><strong>Yale University</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="note-panel">
+          <h2 class="section-heading">Editorial Office</h2>
+          <p class="section-intro">
+            For questions about submissions, editorial procedures, or journal policies, please contact the editorial office.
+          </p>
+          <div class="button-row">
+            <a class="button secondary" href="mailto:ajs@yale.edu">Contact the Editorial Office</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer>
+  <div class="container">
+    <p><strong>American Journal of Science</strong></p>
+
+    <p>
+      Founded in 1818, the American Journal of Science publishes peer-reviewed research
+      on the structure, composition, and evolution of the Earth.
+    </p>
+
+    <p class="small-note">
+      © American Journal of Science
+    </p>
+  </div>
+</footer>
+  <button id="back-to-top" type="button">↑ Back to Top</button>
+<script src="../script.js"></script>
+</body>
+</html>
