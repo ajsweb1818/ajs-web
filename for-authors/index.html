@@ -8,7 +8,7 @@
     name="description"
     content="Complete author guidelines for the American Journal of Science, including journal scope, publication options, submission requirements, publication units, statistical reporting, manuscript preparation, figures, tables, citations, and references."
   />
-  <link rel="stylesheet" href="https://ajsonline.org/styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <style>
     .toc-grid {
       display: grid;
@@ -116,16 +116,129 @@
       .guideline-section { padding: 1.25rem; }
       .compact-table { font-size: 0.88rem; }
     }
+  
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -5rem;
+      z-index: 1000;
+      background: var(--surface);
+      color: var(--text);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    .toc-grid a {
+      text-decoration: none;
+      line-height: 1.3;
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .toc-grid a:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .toc-grid a:focus-visible,
+    .button:focus-visible,
+    nav a:focus-visible,
+    #back-to-top:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .guideline-section { scroll-margin-top: 6rem; }
+
+    .guideline-section > p,
+    .guideline-section > ol,
+    .guideline-section > ul,
+    .manuscript-part > p {
+      max-width: 78ch;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1rem 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-wrap .compact-table {
+      margin-top: 0;
+      min-width: 680px;
+    }
+
+    .equation-table { max-width: 760px; }
+
+    .policy-note {
+      background: var(--accent-very-light);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin: 1.25rem 0 1.75rem;
+    }
+
+    .policy-note p:first-child { margin-top: 0; }
+    .policy-note p:last-child { margin-bottom: 0; }
+
+    .example-box {
+      background: var(--surface);
+      padding: 0.9rem 1rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    @media (max-width: 700px) {
+      .toc-grid { gap: 0.6rem; }
+      .toc-grid a { padding: 0.8rem 0.9rem; }
+      .guideline-section h2 { font-size: 1.65rem; }
+      .guideline-section h3 { font-size: 1.3rem; }
+    }
+
+    @media print {
+      header,
+      .hero .button-row,
+      #back-to-top,
+      .note-panel,
+      .skip-link { display: none !important; }
+
+      .hero,
+      .guideline-section,
+      .check-card,
+      .policy-note,
+      .example-box {
+        background: #fff !important;
+        box-shadow: none !important;
+      }
+
+      .guideline-section {
+        border: 0;
+        padding: 0;
+        break-inside: avoid;
+      }
+
+      .table-wrap { overflow: visible; }
+      .table-wrap .compact-table { min-width: 0; }
+    }
+
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <div class="container header-inner">
       <p class="site-title"><a href="/" style="color: inherit; text-decoration: none;">American Journal of Science</a></p>
       <nav aria-label="Primary">
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/for-authors/">For Authors</a></li>
+          <li><a href="/for-authors/" aria-current="page">For Authors</a></li>
           <li class="nav-dropdown">
             <a href="https://ajsonline.org/articles">Articles</a>
             <ul class="dropdown-menu">
@@ -153,7 +266,7 @@
           statistical reporting, manuscript organization, figures, tables, citations, and references.
         </p>
         <div class="button-row">
-          <a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit a Manuscript</a>
+          <a class="button primary" href="https://ajs.manuscriptmanager.net/" aria-label="Submit a manuscript through AJS Manuscript Manager">Submit a Manuscript</a>
           <a class="button secondary" href="#quick-checklist">Submission Checklist</a>
           <a class="button secondary" href="#preparing-your-manuscript">Prepare Your Manuscript</a>
         </div>
@@ -171,12 +284,12 @@
     </div>
   </section>
 
-  <main>
+  <main id="main-content">
     <section>
       <div class="container">
         <h2 class="section-heading">Author Guidelines</h2>
         <p class="section-intro">
-          These guidelines retain the full submission and manuscript-preparation requirements used by AJS.
+          Use these guidelines to determine whether a manuscript is suitable for AJS and to prepare a complete submission.
         </p>
         <div class="toc-grid">
           <a href="#focus">Focus</a>
@@ -190,8 +303,8 @@
           <a href="#reporting-errors">Reporting Errors</a>
           <a href="#preparing-your-manuscript">Preparing Your Manuscript</a>
           <a href="#citations">Citations</a>
-          <a href="#figures">Figures</a>
           <a href="#tables">Tables</a>
+          <a href="#figures">Figures</a>
           <a href="#supplementary-information">Data &amp; Supplementary Information</a>
           <a href="#references">References</a>
         </div>
@@ -260,6 +373,7 @@
             Briefly, each 500-word increment of the main text counts for 1 PU, and each figure and table counts for 1.5 PU.
             The term <em>free limit</em> indicates the maximum PU length that will be published free of charge.
           </p>
+          <div class="table-wrap">
           <table class="compact-table">
             <thead>
               <tr><th>Publication type</th><th>Description</th><th>Submission</th><th>Length / fee</th></tr>
@@ -274,6 +388,7 @@
               <tr><td><strong>Errata</strong></td><td>Corrections to an AJS publication, as provided by the authors of that publication.</td><td>As needed</td><td>Usually very brief. No fees.</td></tr>
             </tbody>
           </table>
+          </div>
         </div>
 
         <div id="evaluation-criteria" class="guideline-section">
@@ -298,7 +413,7 @@
             All manuscripts must be submitted via the AJS Manuscript Manager system. The submission tool includes the following questions,
             which are important for the initial evaluation by the Editorial Board.
           </p>
-          <div class="button-row"><a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit through Manuscript Manager</a></div>
+          <div class="button-row"><a class="button primary" href="https://ajs.manuscriptmanager.net/" aria-label="Submit a manuscript through AJS Manuscript Manager">Submit through Manuscript Manager</a></div>
           <ol>
             <li><strong>Overview:</strong> A brief description of the essential research question addressed by the paper, and the originality and significance of the paper.</li>
             <li><strong>Authors:</strong> A list of authors, with their affiliations and ORCID numbers.</li>
@@ -336,11 +451,30 @@
           </ol>
           <div class="formula-box">Base PU = number of words / 500 + (number of figures + number of tables) × 1.5</div>
           <p>
-            Round the base PU up to the next whole number. If a manuscript contains equations, the first group of up to 10 equations adds 1 PU.
-            Each additional group of up to 10 equations adds 1 excess PU, even when the publication otherwise remains within the applicable free limit.
+            Round the base PU up to the next whole number. A manuscript with no equations receives no equation PU.
+            If a manuscript contains 1–10 equations, those equations add 1 PU. Each additional group of up to 10 equations
+            is charged as 1 excess PU, even when the manuscript otherwise remains within the applicable free limit.
           </p>
 
-          <div class="example-box">
+          <div class="table-wrap">
+            <table class="compact-table equation-table">
+              <thead>
+                <tr>
+                  <th>Number of equations</th>
+                  <th>Equation PU treatment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>0</td><td>0 PU</td></tr>
+                <tr><td>1–10</td><td>1 PU</td></tr>
+                <tr><td>11–20</td><td>1 PU plus 1 excess PU</td></tr>
+                <tr><td>21–30</td><td>1 PU plus 2 excess PU</td></tr>
+                <tr><td>31–40</td><td>1 PU plus 3 excess PU</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="policy-note">
             <p><strong>Note:</strong> Appendices are considered part of the manuscript and are included in the publication-unit calculation. Material submitted as Supplementary Information is published separately and is not included in the publication-unit calculation.</p>
             <p>
               Authors are encouraged to include only those equations that are essential for understanding the main text.
@@ -348,6 +482,7 @@
               This approach helps keep the main article concise while minimizing publication costs.
             </p>
           </div>
+          <h3>Examples</h3>
           <div class="example-box">
             <p><strong>Example 1:</strong> A Science Paper with 15,000 words and 10 figures and tables combined has a base length of 45 PU, which is the free limit for a Science Paper.</p>
           </div>
@@ -453,6 +588,7 @@
               Each citation to a published source must have a full matching reference in the References section. Unpublished sources may be cited in the text,
               but they are not included in the References section.
             </p>
+            <div class="table-wrap">
             <table class="compact-table">
               <thead><tr><th>Author type</th><th>Parenthetical citation</th><th>Narrative citation</th></tr></thead>
               <tbody>
@@ -461,6 +597,7 @@
                 <tr><td>Three or more authors</td><td>(Davis et al., 1983)</td><td>Davis et al. (1983)</td></tr>
               </tbody>
             </table>
+            </div>
             <div class="citation-examples">
               <p><strong>Multiple parenthetical citations:</strong> (Davis et al., 1983; Dewey &amp; Pitman, 2015; Fisher et al., 1953)</p>
               <p><strong>Multiple narrative citations:</strong> Davis et al. (1983), Dewey and Pitman (2015), and Fisher et al. (1953)</p>
@@ -534,8 +671,8 @@
               numerical-experiment results, or other supporting material that is not essential to the main narrative.
             </p>
             <p>
-              Material submitted as Supplementary Information is published separately from the main article and is not included in the publication-unit calculation.
-              Authors are encouraged to use Supplementary Information when appropriate to keep the main article focused and to reduce publication costs.
+              Supplementary Information is published separately from the main article and is not included in the publication-unit calculation.
+              Authors may use it, when scientifically appropriate, to keep the main article focused and to avoid unnecessary publication charges.
             </p>
             <p>
               Authors are encouraged to archive databases, computer code, and numerical-experiment results as needed to support the paper.
@@ -571,7 +708,7 @@
           <p class="section-intro">For questions about manuscript preparation or submission requirements, please contact the editorial office.</p>
           <div class="button-row">
             <a class="button secondary" href="mailto:ajs@yale.edu">Contact the Editorial Office</a>
-            <a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit a Manuscript</a>
+            <a class="button primary" href="https://ajs.manuscriptmanager.net/" aria-label="Submit a manuscript through AJS Manuscript Manager">Submit a Manuscript</a>
           </div>
         </div>
       </div>
@@ -582,11 +719,11 @@
     <div class="container">
       <p><strong>American Journal of Science</strong></p>
       <p>Founded in 1818, the American Journal of Science publishes peer-reviewed research on the structure, composition, and evolution of the Earth.</p>
-      <p class="small-note">© American Journal of Science</p>
+      <p class="small-note">© 2026 American Journal of Science</p>
     </div>
   </footer>
 
   <button id="back-to-top" type="button">↑ Back to Top</button>
-  <script src="https://ajsonline.org/script.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>
