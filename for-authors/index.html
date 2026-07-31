@@ -6,9 +6,9 @@
   <title>For Authors | American Journal of Science</title>
   <meta
     name="description"
-    content="Author guidelines for the American Journal of Science, including journal scope, publication options, submission requirements, manuscript preparation, paper length, and reference style."
+    content="Complete author guidelines for the American Journal of Science, including journal scope, publication options, submission requirements, publication units, statistical reporting, manuscript preparation, figures, tables, citations, and references."
   />
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://ajsonline.org/styles.css">
   <style>
     .toc-grid {
       display: grid;
@@ -35,14 +35,9 @@
       margin-bottom: 1.5rem;
     }
 
-    .guideline-section h2 {
-      margin-top: 0;
-    }
-
-    .guideline-section h3 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+    .guideline-section h2 { margin-top: 0; }
+    .guideline-section h3 { margin-top: 1.75rem; margin-bottom: 0.6rem; }
+    .guideline-section h4 { margin-top: 1.35rem; margin-bottom: 0.45rem; }
 
     .quick-checklist {
       display: grid;
@@ -57,9 +52,7 @@
       padding: 1.25rem;
     }
 
-    .check-card h3 {
-      margin-top: 0;
-    }
+    .check-card h3 { margin-top: 0; }
 
     .compact-table {
       width: 100%;
@@ -77,9 +70,7 @@
       vertical-align: top;
     }
 
-    .compact-table th {
-      background: var(--accent-light);
-    }
+    .compact-table th { background: var(--accent-light); }
 
     .formula-box {
       background: var(--accent-light);
@@ -95,28 +86,35 @@
       border-left: 4px solid var(--accent);
       padding-left: 1rem;
       margin: 1rem 0;
-      color: var(--muted);
     }
 
-    .subtle-note {
+    .subtle-note,
+    .small-note {
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
     }
 
+    .manuscript-part {
+      padding-top: 0.35rem;
+      margin-top: 1.35rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .citation-examples p,
+    .reference-example p {
+      margin-bottom: 0.65rem;
+    }
+
+    .reference-example {
+      overflow-wrap: anywhere;
+    }
+
     @media (max-width: 900px) {
       .toc-grid,
-      .quick-checklist {
-        grid-template-columns: 1fr;
-      }
-
-      .guideline-section {
-        padding: 1.25rem;
-      }
-
-      .compact-table {
-        font-size: 0.88rem;
-      }
+      .quick-checklist { grid-template-columns: 1fr; }
+      .guideline-section { padding: 1.25rem; }
+      .compact-table { font-size: 0.88rem; }
     }
   </style>
 </head>
@@ -128,14 +126,14 @@
         <ul>
           <li><a href="/about/">About</a></li>
           <li><a href="/for-authors/">For Authors</a></li>
-	  <li class="nav-dropdown">
-	    <a href="https://ajsonline.org/articles">Articles</a>
-	    <ul class="dropdown-menu">
+          <li class="nav-dropdown">
+            <a href="https://ajsonline.org/articles">Articles</a>
+            <ul class="dropdown-menu">
               <li><a href="https://ajsonline.org/articles">Latest Articles</a></li>
               <li><a href="https://ajsonline.org/issues">Issues</a></li>
               <li><a href="https://ajsonline.org/search">Search Articles</a></li>
-	    </ul>
-	  </li>
+            </ul>
+          </li>
           <li><a href="/special-collections/">Special Collections</a></li>
           <li><a href="/editorial-board/">Editorial Board</a></li>
           <li><a href="/policies/">Policies</a></li>
@@ -150,9 +148,9 @@
         <div class="eyebrow">Author Guidelines</div>
         <h1>For Authors</h1>
         <p>
-          Guidance for preparing and submitting manuscripts to the American Journal of Science,
+          Complete guidance for preparing and submitting manuscripts to the American Journal of Science,
           including journal scope, publication options, submission requirements, publication units,
-          manuscript preparation, and reference style.
+          statistical reporting, manuscript organization, figures, tables, citations, and references.
         </p>
         <div class="button-row">
           <a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit a Manuscript</a>
@@ -166,7 +164,7 @@
         <ul class="meta-list">
           <li>Submit through Manuscript Manager</li>
           <li>Use a line-numbered manuscript</li>
-          <li>Initial submission must be MS Word or PDF</li>
+          <li>Initial submission must be Microsoft Word or PDF</li>
           <li>Review files may not exceed 30 MB</li>
         </ul>
       </aside>
@@ -178,7 +176,7 @@
       <div class="container">
         <h2 class="section-heading">Author Guidelines</h2>
         <p class="section-intro">
-          These guidelines are organized to help authors quickly determine whether their work is appropriate for AJS and prepare a complete submission.
+          These guidelines retain the full submission and manuscript-preparation requirements used by AJS.
         </p>
         <div class="toc-grid">
           <a href="#focus">Focus</a>
@@ -188,9 +186,14 @@
           <a href="#web-based-submission">Web-Based Submission</a>
           <a href="#authorship">Authorship</a>
           <a href="#paper-length">Paper Length</a>
+          <a href="#statistical-terms">Statistical Terms</a>
           <a href="#reporting-errors">Reporting Errors</a>
           <a href="#preparing-your-manuscript">Preparing Your Manuscript</a>
-          <a href="#references">Citations and References</a>
+          <a href="#citations">Citations</a>
+          <a href="#figures">Figures</a>
+          <a href="#tables">Tables</a>
+          <a href="#supplementary-information">Data &amp; Supplementary Information</a>
+          <a href="#references">References</a>
         </div>
       </div>
     </section>
@@ -200,23 +203,21 @@
         <div id="focus" class="guideline-section">
           <h2>Focus</h2>
           <p>
-            AJS publishes research that expands our knowledge of the Earth, with an emphasis on the structure,
+            AJS publishes research that expands our knowledge of the Earth, with an emphasis on the study of the structure,
             composition, and evolution of our planet, and the physical, chemical, and biological processes that have influenced
-            that evolution. Recent papers have focused on geochemistry, geochronology, geodynamics, geomorphology, basin analysis,
-            Earth history, petrology, tectonics, and thermochronology. New directions are welcomed.
+            its evolution. Recent papers have focused on geochemistry, geochronology, geodynamics, geomorphology, basin analysis,
+            Earth history, petrology, tectonics, and thermochronology, but new directions are welcomed.
           </p>
         </div>
 
         <div id="quick-checklist" class="guideline-section">
           <h2>Submission Checklist</h2>
-          <p>
-            Before submitting, please confirm that your manuscript and submission materials meet the following requirements.
-          </p>
+          <p>Before submitting, please confirm that your manuscript and submission materials meet the following requirements.</p>
           <div class="quick-checklist">
             <div class="check-card">
               <h3>Manuscript file</h3>
               <ul>
-                <li>MS Word or PDF for initial submission</li>
+                <li>Microsoft Word or PDF for initial submission</li>
                 <li>12-point Times New Roman</li>
                 <li>1.5 line spacing</li>
                 <li>Line numbers included</li>
@@ -225,7 +226,7 @@
             <div class="check-card">
               <h3>Submission information</h3>
               <ul>
-                <li>Overview of research question, originality, and significance</li>
+                <li>Overview of the research question, originality, and significance</li>
                 <li>Author affiliations and ORCID numbers</li>
                 <li>Statement of original content</li>
                 <li>Five or more potential reviewers</li>
@@ -235,9 +236,8 @@
               <h3>Files and limits</h3>
               <ul>
                 <li>Review submission under 30 MB</li>
-                <li>Figures submitted as separate files when required</li>
-                <li>Tables submitted as separate files (must be prepared in MS Word using the Table function; Excel files are not accepted)</li>
-
+                <li>Each figure submitted as a single file</li>
+                <li>Each table submitted as a single Microsoft Word file prepared with the Table function</li>
                 <li>Large files coordinated after acceptance</li>
               </ul>
             </div>
@@ -256,79 +256,37 @@
         <div id="publication-options" class="guideline-section">
           <h2>Publication Options</h2>
           <p>
-            AJS publication options are distinguished in part by length, measured in publication units (PU). Each 500-word
-            increment of the main text counts for 1 PU, and each figure and table counts for 1.5 PU.
+            The publication options below are distinguished, in part, by length, which AJS measures in publication units (PU).
+            Briefly, each 500-word increment of the main text counts for 1 PU, and each figure and table counts for 1.5 PU.
+            The term <em>free limit</em> indicates the maximum PU length that will be published free of charge.
           </p>
-
           <table class="compact-table">
             <thead>
-              <tr>
-                <th>Publication type</th>
-                <th>Description</th>
-                <th>Submission</th>
-                <th>Length / fee</th>
-              </tr>
+              <tr><th>Publication type</th><th>Description</th><th>Submission</th><th>Length / fee</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>Science Paper</strong></td>
-                <td>Original research with full documentation of research questions, literature, methods, results, and conclusions.</td>
-                <td>Open submission</td>
-                <td>Free length: 45 PU. Excess fee applies above the free limit.</td>
-              </tr>
-              <tr>
-                <td><strong>Science Review</strong></td>
-                <td>Assessment, integration, and synthesis of previously published work.</td>
-                <td>By invitation; unsolicited proposals considered</td>
-                <td>Free length: 45 PU. Excess fee applies above the free limit.</td>
-              </tr>
-              <tr>
-                <td><strong>Science Note</strong></td>
-                <td>Short contribution on new data, a new hypothesis or interpretation, or an opinion or perspective.</td>
-                <td>Open submission</td>
-                <td>Maximum length: 4 PU. No fees.</td>
-              </tr>
-              <tr>
-                <td><strong>Technical Report</strong></td>
-                <td>Methods with significant utility for scientific research, such as a procedure, computer program, or database.</td>
-                <td>Open submission</td>
-                <td>Free length: 45 PU. Excess fee applies above the free limit.</td>
-              </tr>
-              <tr>
-                <td><strong>Comment</strong></td>
-                <td>Short critical assessment of a recent AJS publication.</td>
-                <td>Open submission</td>
-                <td>Maximum length: 4 PU. No fees.</td>
-              </tr>
-              <tr>
-                <td><strong>Reply</strong></td>
-                <td>Authors' reply to a Comment about their AJS publication.</td>
-                <td>Usually invited after a Comment</td>
-                <td>Maximum length: 4 PU. No fees.</td>
-              </tr>
-              <tr>
-                <td><strong>Errata</strong></td>
-                <td>Corrections to an AJS publication, as provided by the authors of that publication.</td>
-                <td>As needed</td>
-                <td>Usually very brief. No fees.</td>
-              </tr>
+              <tr><td><strong>Science Paper</strong></td><td>A primary contribution presenting original research with full documentation of relevant research questions, background literature, methods, results, and conclusions.</td><td>Open submission by author</td><td>Free length: 45 PU. Longer papers are charged an excess fee.</td></tr>
+              <tr><td><strong>Science Review</strong></td><td>A secondary contribution focused on the assessment, integration, and synthesis of previously published work.</td><td>Submission is by invitation, although unsolicited proposals will be considered.</td><td>Free length: 45 PU. Longer papers are charged an excess fee.</td></tr>
+              <tr><td><strong>Science Note</strong></td><td>A short contribution about a topic of broad interest. It may focus on new data, a new hypothesis or interpretation, or an opinion or perspective. The topic must be compact enough to be fully supported within the format.</td><td>Open submission by author</td><td>Maximum length: 4 PU. No fees.</td></tr>
+              <tr><td><strong>Technical Report</strong></td><td>A publication describing methods with significant utility for scientific research, such as a laboratory procedure, computer program, or database.</td><td>Open submission by author</td><td>Free length: 45 PU. Longer papers are charged an excess fee.</td></tr>
+              <tr><td><strong>Comment</strong></td><td>A short critical assessment of a recent AJS publication.</td><td>Open submission by author</td><td>Maximum length: 4 PU. No fees.</td></tr>
+              <tr><td><strong>Reply</strong></td><td>The authors’ reply to a Comment about their AJS publication.</td><td>—</td><td>Maximum length: 4 PU. No fees.</td></tr>
+              <tr><td><strong>Errata</strong></td><td>Corrections to an AJS publication, as provided by the authors of that publication.</td><td>As needed</td><td>Usually very brief. No fees.</td></tr>
             </tbody>
           </table>
         </div>
 
         <div id="evaluation-criteria" class="guideline-section">
           <h2>Evaluation Criteria</h2>
-          <p>
-            AJS seeks papers that rank high in terms of the following criteria, after Larsson and Patriksson (2016). Authors are encouraged to consider these criteria while writing their papers.
-          </p>
+          <p>AJS seeks papers that rank high in terms of the following criteria, after Larsson and Patriksson (2016). Please consider these criteria as you write your paper.</p>
           <ol>
             <li><strong>Relevance:</strong> How does the paper relate to current scientific imperatives?</li>
             <li><strong>Generality:</strong> What is the reach of the paper in terms of research focus and results?</li>
             <li><strong>Originality:</strong> Is the research unique, creative, or innovative?</li>
             <li><strong>Progress:</strong> Does the paper provide a significant advance in scientific knowledge?</li>
             <li><strong>Accessibility:</strong> Is the paper accessible to a broad audience?</li>
-            <li><strong>Scientific Foundation:</strong> Does the paper establish a clear foundation based on accepted theory and/or methodology?</li>
-            <li><strong>Integration:</strong> Does the paper integrate previous knowledge with new results and make connections with other fields?</li>
+            <li><strong>Scientific Foundation:</strong> Does the paper establish a clear foundation based on accepted theory and/or methodology? Is that foundation clearly described and referenced at the beginning of the paper?</li>
+            <li><strong>Integration:</strong> Does the paper provide a clear integration of previous knowledge with new results? Does it make connections with research in other fields, or indicate a promising approach for future research?</li>
             <li><strong>Consistency:</strong> Are the results and conclusions consistent with the claims and ambitions stated in the introduction?</li>
             <li><strong>News Value:</strong> Is the paper of interest to the broader scientific community or to the general public?</li>
           </ol>
@@ -337,16 +295,15 @@
         <div id="web-based-submission" class="guideline-section">
           <h2>Web-Based Submission</h2>
           <p>
-            All manuscripts must be submitted through the AJS Manuscript Manager system. The submission tool asks authors to provide information that is important for the initial evaluation by the Editorial Board.
+            All manuscripts must be submitted via the AJS Manuscript Manager system. The submission tool includes the following questions,
+            which are important for the initial evaluation by the Editorial Board.
           </p>
-          <div class="button-row">
-            <a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit through Manuscript Manager</a>
-          </div>
+          <div class="button-row"><a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit through Manuscript Manager</a></div>
           <ol>
-            <li><strong>Overview:</strong> A brief description of the essential research question, originality, and significance of the paper.</li>
-            <li><strong>Authors:</strong> Authors, affiliations, and ORCID numbers.</li>
-            <li><strong>Statement of Original Content:</strong> Confirmation that the content is original and not in review, in press, or already published elsewhere. Any overlap with other publications should be disclosed.</li>
-            <li><strong>Reviewers:</strong> Five or more potential reviewers, with a brief statement of expertise for each. Authors may also identify reviewers to avoid, with explanations.</li>
+            <li><strong>Overview:</strong> A brief description of the essential research question addressed by the paper, and the originality and significance of the paper.</li>
+            <li><strong>Authors:</strong> A list of authors, with their affiliations and ORCID numbers.</li>
+            <li><strong>Statement of Original Content:</strong> A statement indicating that the content is original and that the paper is not in review, in press, or already published elsewhere. Any overlap with other publications must be discussed. AJS may reject or retract papers if significant undisclosed overlap is discovered after submission or publication.</li>
+            <li><strong>Reviewers:</strong> A list of five or more potential reviewers, with a brief statement for each indicating their expertise relative to the paper. Authors may also identify reviewers they feel should be avoided, with a brief explanation for each. AJS cannot guarantee that these suggestions will be followed, but the information is often helpful.</li>
             <li><strong>Editors and Associate Editors:</strong> Authors may suggest AJS Editors and Associate Editors who are well suited to handle the paper.</li>
           </ol>
         </div>
@@ -354,152 +311,264 @@
         <div id="authorship" class="guideline-section">
           <h2>Authorship</h2>
           <p>
-            At AJS, the lead author is generally the person who has done most of the work and taken the lead in writing the paper.
-            Coauthors are those who have made significant scientific contributions and are generally listed in order of the declining
-            size of their contributions. The paper must include an accurate statement of each listed author's contribution, and all coauthors must agree to the submission.
+            At AJS, the lead author is generally the person who has performed most of the work and taken the lead in writing the paper.
+            Coauthors are those who have made significant scientific contributions and are generally listed in descending order of contribution.
+            The paper must include an accurate statement describing the contribution of each listed author. All coauthors must agree to the submission.
+            Upon submission, AJS sends an inquiry to each coauthor to verify that all authors agree with the decision to submit.
           </p>
           <p>
-            Correspondence during review, revision, and publication will be directed to the corresponding author. Usually this is the lead author,
-            but another author may take on this role when appropriate.
+            Correspondence during review, revision, and publication will be directed to the corresponding author. The lead author usually serves in this role,
+            but another author may be designated when appropriate. Authors identify the corresponding author during the submission process.
           </p>
         </div>
 
         <div id="paper-length" class="guideline-section">
           <h2>Paper Length</h2>
           <p>
-            AJS uses publication units (PU) to measure publication length. This measure sets limits for short-form publications and defines the free limit for long-form publications. An excess length fee of $100 per excess PU applies if a long-form publication exceeds the free limit.
+            AJS uses publication units (PU) to measure the length of a digital publication. This measure sets limits for short-form publications
+            and defines a free limit for long-form publications. An excess length fee of $100 per excess PU applies when a long-form publication exceeds the free limit.
           </p>
-          <ul>
-            <li>Text content: 1 PU per 500 words.</li>
-            <li>Each figure and table: 1.5 PU.</li>
-            <li>The total PU is rounded up to the next whole number.</li>
-            <li>The first 10 equations count as 1 PU. Additional equations are counted as excess PU, with 1 PU added for every 10 additional equations.</li>
-          </ul>
-          <div class="formula-box">
-            PU = number of words / 500 + (number of figures + number of tables) × 1.5
-          </div>
-          <p class="small-note">The result is rounded up to the next whole number.</p>
+          <ol>
+            <li><strong>Text content:</strong> 1 PU per 500 words. The count includes the main body, equations, appendices, and references. The title, author list and affiliations, keywords, and figure and table captions are excluded.</li>
+            <li><strong>Figures and tables:</strong> Add 1.5 PU for each figure and each table.</li>
+            <li><strong>Rounding:</strong> Round the total PU up to the next whole number.</li>
+            <li><strong>Equations:</strong> If a manuscript contains equations, the first group of up to 10 equations counts as 1 PU. Each additional group of up to 10 equations is counted as 1 excess PU, regardless of whether the manuscript exceeds the free publication-unit limit.</li>
+          </ol>
+          <div class="formula-box">Base PU = number of words / 500 + (number of figures + number of tables) × 1.5</div>
+          <p>
+            Round the base PU up to the next whole number. If a manuscript contains equations, the first group of up to 10 equations adds 1 PU.
+            Each additional group of up to 10 equations adds 1 excess PU, even when the publication otherwise remains within the applicable free limit.
+          </p>
 
           <div class="example-box">
-            <p><strong>Example 1:</strong> A Science Paper with 15,000 words and 10 figures/tables has a length of 45 PU, which is the free limit for a Science Paper.</p>
+            <p><strong>Note:</strong> Appendices are considered part of the manuscript and are included in the publication-unit calculation. Material submitted as Supplementary Information is published separately and is not included in the publication-unit calculation.</p>
+            <p>
+              Authors are encouraged to include only those equations that are essential for understanding the main text.
+              Extended mathematical derivations, detailed calculations, and other supporting material may be provided as Supplementary Information when appropriate.
+              This approach helps keep the main article concise while minimizing publication costs.
+            </p>
           </div>
           <div class="example-box">
-            <p><strong>Example 2:</strong> A Science Paper with 20,000 words and 12 figures/tables has a length of 58 PU, indicating an excess fee of $1,300.</p>
+            <p><strong>Example 1:</strong> A Science Paper with 15,000 words and 10 figures and tables combined has a base length of 45 PU, which is the free limit for a Science Paper.</p>
           </div>
           <div class="example-box">
-            <p><strong>Example 3:</strong> An article with 8,000 words, 4 figures, and 32 equations totals 23 PU, with 3 excess PU for equations. The excess PU fee is $300.</p>
+            <p><strong>Example 2:</strong> A Science Paper with 20,000 words and 12 figures and tables combined has a base length of 58 PU, resulting in 13 excess PU and an excess-length fee of $1,300.</p>
+          </div>
+          <div class="example-box">
+            <p><strong>Example 3:</strong> An article with 8,000 words, 4 figures, and 32 equations has a base length of 23 PU (16 PU for text, 6 PU for figures, and 1 PU for the first 10 equations). The remaining 22 equations are charged as three excess PU (equations 11–20, 21–30, and 31–32), resulting in an excess-equation fee of $300.</p>
           </div>
         </div>
 
-        <div id="reporting-errors" class="guideline-section">
-          <h2>Statistical Terms and Reporting Errors</h2>
+        <div id="statistical-terms" class="guideline-section">
+          <h2>Statistical Terms</h2>
           <p>
-            Authors should report errors and uncertainties clearly and consistently throughout the paper. When errors are cited, the method and level of the error estimate should be stated.
+            A population is a set of similar items or events of interest for a question or experiment. A sample is a subset of those items or events and is used to represent the statistical properties of the population.
+            Those properties are characterized by statistical parameters. A common convention is to use Greek letters for population parameters, such as population mean μ and population standard deviation σ,
+            and Roman letters for parameters estimated from samples, such as sample mean <em>m</em> and sample standard deviation <em>s</em>.
           </p>
-          <ul>
-            <li>Common methods include SE, the standard error or standard deviation of the mean, and CI, a confidence interval.</li>
-            <li>The level of the error estimate should be specified, such as 1SE, 2SE, 68% CI, or 98% CI.</li>
-            <li>Authors are encouraged to report errors in the same fashion throughout the paper.</li>
-            <li>SE should not be confused with SD. SD estimates dispersion of sample data; SE estimates expected dispersion of the sample mean, where SE = SD/√n.</li>
-            <li>AJS advises against using 1σ, 2σ, etc. to denote the level of an error estimate, because σ is widely used to represent population standard deviation.</li>
-          </ul>
+          <p>
+            Population parameters are generally unknown, and sample parameters are estimated. The uncertainty of the estimated mean is usually called the standard error,
+            or the standard deviation of the sample mean, and is labeled SE or s<sub>m</sub>, where SE = s/√n and n is the sample size.
+          </p>
+        </div>
+
+        <div id="reporting-errors" class="guideline-section">
+          <h2>Recommendations for Reporting Errors</h2>
+          <p>The following guidelines are provided to ensure clearer reporting of errors and uncertainties.</p>
+          <ol type="a">
+            <li>Errors should not be cited without identifying the method and level of the estimate. The two most common methods are SE, the standard error (or standard deviation of the mean), and CI, a confidence interval. The SE method is more flexible because it does not require a specific probability distribution. The CI method may be more precise, but only when the probability distribution is known. Typical levels include 1SE, 2SE, 68% CI, and 98% CI.</li>
+            <li>Report errors consistently throughout the paper. In that case, the method and level need to be stated only once near the beginning, for example: “All errors in this paper are reported as 2SE unless noted otherwise.”</li>
+            <li>Do not confuse SE with SD, the sample-based standard deviation. SD estimates the dispersion of the sample data; SE estimates the expected dispersion of the sample mean, where SE = SD/√n.</li>
+            <li>In some cases, an error is better represented by SD than SE. For example, for n = 100 detrital grain ages with mean = 50 Ma and SD = 5 Ma, the precision of the estimated mean is SE = SD/√n = 0.5 Ma. If the focus is instead the expected range of a newly selected grain age from the same distribution, SD = 5 Ma is the more appropriate representation.</li>
+            <li>AJS advises against using 1σ, 2σ, and similar notation for the level of an error estimate because σ is widely used for the population standard deviation, not the standard error. This notation may lead readers to question whether SD and SE have been confused.</li>
+          </ol>
         </div>
 
         <div id="preparing-your-manuscript" class="guideline-section">
           <h2>Preparing Your Manuscript for Submission</h2>
           <p>
-            The initial submission must be MS Word or PDF. The manuscript should use 12-point Times New Roman font with 1.5 line spacing. Each line should be numbered to help with the reviewing process. AJS will not start evaluation or review until a line-numbered manuscript is received.
+            The initial manuscript must be submitted as a Microsoft Word or PDF file. Use 12-point Times New Roman with 1.5 line spacing (approximately four lines per inch).
+            Continuous line numbering must be included throughout the manuscript to facilitate peer review. AJS will not begin evaluation or review until a line-numbered manuscript is received.
           </p>
           <p>
-            Submitted manuscripts may not exceed 30 MB for the review process. After acceptance, AJS will coordinate with authors regarding large files needed to ensure full-resolution figures and other content.
+            A submitted manuscript may not exceed 30 MB. Reduce the combined file size if the submission exceeds this limit.
+            This limit applies only during review. After acceptance, AJS will coordinate with authors as needed to accommodate large files and preserve full-resolution figures and other content.
           </p>
+          <p>The manuscript should contain the following parts in the order shown below.</p>
 
-          <h3>Manuscript Order</h3>
-          <ol>
-            <li><strong>Title:</strong> Specific, informative, and brief. Avoid abbreviations and acronyms unless they are defined in the abstract.</li>
-            <li><strong>Author List:</strong> List authors after the title, followed by affiliations. Use numbered footnotes to link authors to affiliations. Indicate the corresponding author with an asterisk and email footnote.</li>
-            <li><strong>Abstract:</strong> A concise, freestanding summary of fewer than 300 words. Define all abbreviations in the abstract. Do not refer to external information such as references, tables, or figures.</li>
-            <li><strong>Keywords:</strong> Provide at least three keywords summarizing the topic, content, or focus of the paper.</li>
-            <li><strong>Main Text:</strong> Divide the text into numbered sections with headings. Three section levels are allowed.</li>
-            <li><strong>Acknowledgments:</strong> Indicate funding sources and thank colleagues, contributors, and reviewers.</li>
-            <li><strong>Author Contributions:</strong> Provide a brief summary of each author's contribution.</li>
-            <li><strong>Data and Supplementary Information:</strong> Report the nature and location of data and supplementary information essential to the paper.</li>
-            <li><strong>References:</strong> Provide full references for all published sources cited in the paper.</li>
-          </ol>
-
-          <h3>Equations</h3>
-          <p>
-            Equations should be centered and numbered sequentially, with numbers in parentheses on the right margin. Equations are referenced in text as equation (1), or in parentheses as (eq. 1) or (eqs. 14 and 15). For publication, manuscripts and equations must be provided in files created using a current version of MS Word.
-          </p>
-
-          <h3>Tables</h3>
-          <p>
-            Each table must be submitted as a single file and prepared using the Table option in MS Word. Use only separate cells, ordered lists, or unordered lists to separate content within a cell. Do not use spaces, tabs, HTML tags, or manual line breaks inside a table.
-          </p>
-
-          <h3>Figures</h3>
-          <p>
-            Figures should be prepared in JPEG, TIFF, or PNG format. Vector formats such as EPS and PDF are not allowed. Raster resolution should be at least 300 dpi. Each figure must be submitted as a single file, including composite figures. Larger figures may be included as Supplementary Information.
-          </p>
-        </div>
-
-        <div id="references" class="guideline-section">
-          <h2>Citations and References</h2>
-          <p>
-            AJS follows the Publication Manual of the APA, 7th Edition, 2020, for citations and references to published sources. A published source is defined as content that is publicly accessible in print or digital form, including journal articles, books, theses, dissertations, databases, software releases, and technical reports.
-          </p>
-          <p>
-            Citations of published sources must be matched by full references in the References section. AJS allows in-text citations of unpublished sources, but those citations are not included in the References section.
-          </p>
-
-          <table class="compact-table">
-            <thead>
-              <tr>
-                <th>Author Type</th>
-                <th>Parenthetical Citation</th>
-                <th>Narrative Citation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>One author</td>
-                <td>(Fisher, 1953)</td>
-                <td>Fisher (1953)</td>
-              </tr>
-              <tr>
-                <td>Two authors</td>
-                <td>(Dewey &amp; Pitman, 1973)</td>
-                <td>Dewey and Pitman (1973)</td>
-              </tr>
-              <tr>
-                <td>Three or more authors</td>
-                <td>(Davis et al., 1983)</td>
-                <td>Davis et al. (1983)</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p>
-            Multiple citations should be sorted in alphabetical order. Unpublished items should be cited directly in the text, for example: (F. A. Adams et al., unpublished data, 2021; S. W. Jones, personal communication, 2022; G. S. Smith, written communication, 2020).
-          </p>
-
-          <h3>Reference Examples</h3>
-          <div class="example-box">
-            <p>Manning, C. E., &amp; Bird, D. K. (1991). Porosity evolution and fluid flow in the basalts of the Skaergaard magma-hydrothermal system, east Greenland. <em>American Journal of Science, 291</em>(3), 201–257. https://doi.org/10.2475/ajs.291.3.201</p>
+          <div class="manuscript-part">
+            <h3>Title</h3>
+            <p>A title should be specific, informative, and brief. Avoid abbreviations and acronyms; if they are used, define them in the abstract.</p>
           </div>
-          <div class="example-box">
-            <p>Hox, J. J., Moerbeek, M., &amp; van de Schoot, R. (2017). <em>Multilevel Analysis: Techniques and Applications</em> (3rd ed.). Routledge.</p>
+
+          <div class="manuscript-part">
+            <h3>Author List</h3>
+            <p>
+              List the authors after the title, followed by their affiliations or addresses. Use numbered footnotes to link each author to an affiliation.
+              The affiliation should indicate where the research was performed. An author may include a second footnote for a current affiliation.
+            </p>
+            <div class="example-box">
+              <p>Marie Curie<sup>1,2</sup><br><sup>1</sup>University of Paris, <sup>2</sup>Institut du Radium</p>
+            </div>
+            <p>
+              Indicate the corresponding author with an asterisk in the author list and provide the email address in a footnote.
+            </p>
+            <div class="example-box"><p>Corresponding author: charles.darwin@beagle.org</p></div>
           </div>
-          <div class="example-box">
-            <p>Evangelos Moulas, Boris Kaus, &amp; Bjorn Jamtveit. (2022). <em>Dynamic Pressure Variations in the Lower Crust Caused by Localized Fluid-Induced Weakening</em> (LaMEM input files). Zenodo. https://doi.org/10.5281/zenodo.6538290</p>
+
+          <div class="manuscript-part">
+            <h3>Abstract</h3>
+            <p>
+              The abstract is a concise, freestanding summary of fewer than 300 words. Define all abbreviations within the abstract.
+              Do not refer to external information such as references, tables, or figures.
+            </p>
+          </div>
+
+          <div class="manuscript-part">
+            <h3>Keywords</h3>
+            <p>Provide at least three keywords that summarize the topic, content, and/or focus of the paper. Authors may design their own keywords or use terms in common usage, such as USGS keywords.</p>
+          </div>
+
+          <div class="manuscript-part">
+            <h3>Main Text</h3>
+            <h4>Sections</h4>
+            <p>The main text should be divided into numbered sections, each with its own heading. Use Arabic numerals. Three section levels are allowed.</p>
+            <div class="example-box">
+              <p>1. INTRODUCTION<br>1.1. Basic Ideas<br>1.1.1. Definition of an idea</p>
+            </div>
+            <h4>Footnotes</h4>
+            <p>Footnote comments are allowed in the main text but should be used sparingly.</p>
+
+            <h4 id="citations">Citations</h4>
+            <p>
+              AJS uses different styles and rules for citations and references to published and unpublished sources. For published sources,
+              AJS follows the <em>Publication Manual of the American Psychological Association</em>, 7th edition (2020).
+            </p>
+            <p>
+              For AJS purposes, a published source is content that is publicly accessible in print or digital form. Examples include journal articles,
+              books, theses, dissertations, databases, software releases, and technical reports, provided they are publicly available.
+              Publication does not guarantee quality or reliability, but it allows others to evaluate the source independently.
+            </p>
+            <p>
+              Each citation to a published source must have a full matching reference in the References section. Unpublished sources may be cited in the text,
+              but they are not included in the References section.
+            </p>
+            <table class="compact-table">
+              <thead><tr><th>Author type</th><th>Parenthetical citation</th><th>Narrative citation</th></tr></thead>
+              <tbody>
+                <tr><td>One author</td><td>(Fisher, 1953)</td><td>Fisher (1953)</td></tr>
+                <tr><td>Two authors</td><td>(Dewey &amp; Pitman, 1973)</td><td>Dewey and Pitman (1973)</td></tr>
+                <tr><td>Three or more authors</td><td>(Davis et al., 1983)</td><td>Davis et al. (1983)</td></tr>
+              </tbody>
+            </table>
+            <div class="citation-examples">
+              <p><strong>Multiple parenthetical citations:</strong> (Davis et al., 1983; Dewey &amp; Pitman, 2015; Fisher et al., 1953)</p>
+              <p><strong>Multiple narrative citations:</strong> Davis et al. (1983), Dewey and Pitman (2015), and Fisher et al. (1953)</p>
+              <p><strong>Unpublished sources:</strong> (F. A. Adams et al., unpublished data, 2021; S. W. Jones, personal communication, 2022; G. S. Smith, written communication, 2020)</p>
+            </div>
+
+            <h4>Equations</h4>
+            <p>
+              Center equations on the page and number them sequentially, with the numbers in parentheses at the right margin.
+              Refer to them in the text as equation (1), or parenthetically as (eq. 1) or (eqs. 14 and 15).
+              Capitalize “Equation” when it begins a sentence, as in “Equation (1).”
+            </p>
+            <p>
+              For initial submission, equations may be prepared by any method, including Microsoft Word or LaTeX.
+              For publication, the manuscript and equations must be provided in files created with a current version of Microsoft Word.
+            </p>
+
+            <h4 id="tables">Tables</h4>
+            <p>
+              Submit each table as a single file. Prepare tables with the Table function in Microsoft Word. Number tables sequentially according to their placement in the paper.
+              Place the table number and a brief descriptive title above the table, for example: “Table 1. Friction coefficient for sliding.”
+            </p>
+            <p>
+              Use only separate cells, ordered lists, or unordered lists to separate content within a cell into individual lines.
+              Do not use spaces, tabs, HTML tags, or manual line breaks inside a table. Symbols indicating statistical significance should appear in the same cell as the value and should not occupy a separate column.
+            </p>
+            <p>
+              Individual values may be highlighted with boldface, italics, or shading. Use only one type of shading and one font size.
+              Underlining is not permitted, and text color is limited to black. Any shading will be standardized by the publisher.
+            </p>
+            <p>
+              In the text, refer to each table using the lowercase word “table” followed by its number, as in “table 1” or “(table 1).”
+              Capitalize the word when it begins a sentence: “Table 1.”
+            </p>
+
+            <h4 id="figures">Figures</h4>
+            <p>
+              Prepare figures in JPEG, TIFF, or PNG format. Vector formats, including EPS and PDF, are not allowed.
+              Raster resolution should be at least 300 dpi to ensure sufficient quality in the published paper.
+            </p>
+            <p>
+              Submit each figure as a single file, including composite figures with multiple parts. Each figure must fit within the print limits of a single published page:
+              17.25 × 25.5 cm (6.8 × 10.0 inches). Larger figures may be included as Supplementary Information.
+              Label the parts of a composite figure with successive uppercase letters: A, B, C, and so forth.
+            </p>
+            <p>
+              Number figures sequentially according to their placement in the paper. In the text, use the lowercase word “figure” followed by its number,
+              as in “figure 1.” Capitalize the word at the beginning of a sentence: “Figure 1.” Use the abbreviation in parentheses, as in “(fig. 1),” and at the start of a figure caption,
+              as in “Fig. 1. Plots showing Y versus Zr.” For parts of a composite figure, use forms such as “figure 1A” or “(fig. 3A and D).”
+            </p>
+            <p>
+              Authors are responsible for obtaining permission to reproduce previously published figures. The permission must be acknowledged in the figure caption.
+            </p>
+          </div>
+
+          <div class="manuscript-part">
+            <h3>Acknowledgments</h3>
+            <p>This section should identify funding sources and thank colleagues, other contributors, and reviewers.</p>
+          </div>
+
+          <div class="manuscript-part">
+            <h3>Author Contributions</h3>
+            <p>Provide a brief summary of each author’s contribution to the paper.</p>
+          </div>
+
+          <div id="supplementary-information" class="manuscript-part">
+            <h3>Data and Supplementary Information</h3>
+            <p>
+              Report the nature and location of data and supplementary information that are essential to the paper but too large to include in the main article.
+              Supplementary Information may include extended mathematical derivations, additional figures or tables, detailed methods, datasets, computer code,
+              numerical-experiment results, or other supporting material that is not essential to the main narrative.
+            </p>
+            <p>
+              Material submitted as Supplementary Information is published separately from the main article and is not included in the publication-unit calculation.
+              Authors are encouraged to use Supplementary Information when appropriate to keep the main article focused and to reduce publication costs.
+            </p>
+            <p>
+              Authors are encouraged to archive databases, computer code, and numerical-experiment results as needed to support the paper.
+              Data and software citations must also appear in the References section.
+            </p>
+            <p>
+              AJS maintains an online repository for data and supplementary information. Zenodo also provides an open-access repository suitable for computer code,
+              numerical results, and datasets. Zenodo supplies DOI links, making archived contributions easy to cite in the References section.
+            </p>
+          </div>
+
+          <div id="references" class="manuscript-part">
+            <h3>References</h3>
+            <p>
+              All published sources cited in the paper must be fully referenced in this section. Citations to unpublished sources are excluded.
+              References must follow APA 7th edition style. Each reference should include all authors, publication year, full title, source, and DOI link when available.
+              Format DOI links as <code>https://doi.org/xxxxx</code>.
+            </p>
+            <div class="example-box reference-example">
+              <p>Manning, C. E., &amp; Bird, D. K. (1991). Porosity evolution and fluid flow in the basalts of the Skaergaard magma-hydrothermal system, east Greenland. <em>American Journal of Science, 291</em>(3), 201–257. https://doi.org/10.2475/ajs.291.3.201</p>
+            </div>
+            <div class="example-box reference-example">
+              <p>Hox, J. J., Moerbeek, M., &amp; van de Schoot, R. (2017). <em>Multilevel analysis: Techniques and applications</em> (3rd ed.). Routledge.</p>
+            </div>
+            <div class="example-box reference-example">
+              <p>Moulas, E., Kaus, B., &amp; Jamtveit, B. (2022). <em>Dynamic pressure variations in the lower crust caused by localized fluid-induced weakening</em> (LaMEM input files) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.6538290</p>
+            </div>
           </div>
         </div>
 
         <div class="note-panel">
           <h2 class="section-heading">Questions?</h2>
-          <p class="section-intro">
-            For questions about manuscript preparation or submission requirements, please contact the editorial office.
-          </p>
+          <p class="section-intro">For questions about manuscript preparation or submission requirements, please contact the editorial office.</p>
           <div class="button-row">
             <a class="button secondary" href="mailto:ajs@yale.edu">Contact the Editorial Office</a>
             <a class="button primary" href="https://ajs.manuscriptmanager.net/">Submit a Manuscript</a>
@@ -509,21 +578,15 @@
     </section>
   </main>
 
-<footer>
-  <div class="container">
-    <p><strong>American Journal of Science</strong></p>
+  <footer>
+    <div class="container">
+      <p><strong>American Journal of Science</strong></p>
+      <p>Founded in 1818, the American Journal of Science publishes peer-reviewed research on the structure, composition, and evolution of the Earth.</p>
+      <p class="small-note">© American Journal of Science</p>
+    </div>
+  </footer>
 
-    <p>
-      Founded in 1818, the American Journal of Science publishes peer-reviewed research
-      on the structure, composition, and evolution of the Earth.
-    </p>
-
-    <p class="small-note">
-      © American Journal of Science
-    </p>
-  </div>
-</footer>
   <button id="back-to-top" type="button">↑ Back to Top</button>
-<script src="../script.js"></script>
+  <script src="https://ajsonline.org/script.js"></script>
 </body>
 </html>
