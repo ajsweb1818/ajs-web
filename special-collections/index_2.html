@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Collections | American Journal of Science</title>
+  <meta
+    name="description"
+    content="Explore Special Collections from the American Journal of Science, including current and archived thematic collections in Earth science."
+  />
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1e2a36;
+      --muted: #5c6b77;
+      --border: #d8dee4;
+      --accent: #193a63;
+      --accent-hover: #122b49;
+      --max-width: 1120px;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .site-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 4rem 0 3rem;
+      background: linear-gradient(to bottom, #ffffff, #f1f4f7);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 62ch;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    main section {
+      padding: 3rem 0;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      margin: 0 0 0.75rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 72ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .card-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 1px solid var(--accent);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-hover);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .button.secondary:hover {
+      background: #eef3f8;
+      text-decoration: none;
+    }
+
+    .note-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 2rem 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <p class="site-title"><a href="/" style="color: inherit; text-decoration: none;">American Journal of Science</a></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://ajsonline.org/for-authors">For Authors</a></li>
+          <li><a href="https://ajsonline.org/articles">Articles</a></li>
+          <li><a href="/special-collections/">Special Collections</a></li>
+          <li><a href="https://ajsonline.org/editorial-board">Editorial Board</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">American Journal of Science</div>
+      <h1>Special Collections</h1>
+      <p>
+        Thematic collections of articles curated around important questions,
+        enduring topics, and emerging directions in Earth science.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-heading">About Special Collections</h2>
+        <p class="section-intro">
+          AJS Special Collections bring together contributions organized around a
+          focused scientific theme. These collections are intended to highlight
+          active areas of research, bring related work into conversation, and
+          provide readers with a clear entry point into major topics in Earth science.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Current Collections</h2>
+        <p class="section-intro">
+          Explore current Special Collections from the American Journal of Science.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-label">Current Collection</div>
+            <h3>Snowball Earth</h3>
+            <p>
+              A special collection exploring the dynamics, causes, and consequences
+              of Cryogenian global glaciations and their aftermath, including climate,
+              geochemistry, redox change, and links to early life.
+            </p>
+            <div class="button-row">
+              <a class="button primary" href="/special-collections/snowball-earth/">View Collection</a>
+              <a class="button secondary" href="https://ajs.manuscriptmanager.net/">Submit to AJS</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Archived Collections</h2>
+        <p class="section-intro">
+          Selected past thematic issues and collections published by AJS.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-label">Archived Collection</div>
+            <h3>Special Issue (October 2021, Volume 321, Issue 8)</h3>
+            <p>
+              This issue was published as a Special Issue of the American Journal of Science,
+              bringing together contributions on a focused scientific theme.
+            </p>
+            <div class="button-row">
+              <a class="button secondary" href="#">View Issue</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Archived Collection</div>
+            <h3>Issues Dedicated to the Memory of Alfred Kröner (2021)</h3>
+            <p>
+              Two 2021 issues of AJS (Volume 321, Issues 1–2 and Issue 6) were dedicated to the
+              memory of distinguished scientist Alfred Kröner, who passed away on 22 May 2019.
+            </p>
+            <div class="button-row">
+              <a class="button secondary" href="#">View Issues</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="note-panel">
+          <h2 class="section-heading">Future Collections</h2>
+          <p class="section-intro">
+            Additional collections will be added as new initiatives develop.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="note-panel">
+          <h2 class="section-heading">Questions or proposals</h2>
+          <p class="section-intro">
+            For questions about current Special Collections or to discuss ideas for a future
+            collection, please contact the editorial office.
+          </p>
+          <div class="button-row">
+            <a class="button secondary" href="mailto:ajs@yale.edu">Contact the Editorial Office</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>American Journal of Science</strong></p>
+      <p>
+        Special Collections pages are maintained separately from article hosting.
+        Published articles and journal content are available through the journal's main platform.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
